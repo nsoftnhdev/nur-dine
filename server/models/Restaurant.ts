@@ -5,7 +5,7 @@ export interface IRestaurant extends Document {
   slug: string;
   description: string;
   cuisine: string;
-  priceRange: "RM" | "RMRM" | "RMRMRM" | "RMRMRMRM";
+  priceRange: "$" | "$$" | "$$$" | "$$$$";
   rating: number;
   reviewCount: number;
   location: string;
@@ -37,7 +37,7 @@ const RestaurantSchema = new Schema<IRestaurant>(
     cuisine: { type: String, required: true, trim: true },
     priceRange: {
       type: String,
-      enum: ["RM", "RMRM", "RMRMRM", "RMRMRMRM"],
+      enum: ["$", "$$", "$$$", "$$$$"],
       required: true,
     },
     rating: { type: Number, default: 5.0, min: 1, max: 5 },
