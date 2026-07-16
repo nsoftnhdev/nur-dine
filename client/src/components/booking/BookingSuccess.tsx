@@ -38,7 +38,7 @@ export default function BookingSuccess({ confirmedBooking, restaurant, date, slo
                     <div className="flex items-center gap-3">
                         <Calendar size={14} className="text-black/55" />
                         <span>
-                            {new Date(date).toLocaleDateString("en-US", {
+                            {new Date(date).toLocaleDateString("en-GB", {
                                 weekday: "long",
                                 year: "numeric",
                                 month: "long",

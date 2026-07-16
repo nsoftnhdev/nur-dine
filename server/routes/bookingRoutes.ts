@@ -10,6 +10,6 @@ const bookingRouter = Router();
 
 bookingRouter.post("/", protect, createBooking);
 bookingRouter.get("/my", protect, getBookings);
-bookingRouter.get("/:id/cancel", protect, cancelBooking);
+bookingRouter.put("/:id/cancel", protect, cancelBooking);
 
 export default bookingRouter;
