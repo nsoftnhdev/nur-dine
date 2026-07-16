@@ -17,7 +17,7 @@ export const getRestaurants = async (
     const queryObj: any = { status: "approved" };
 
     if (search) {
-      queryObj.$sor = [
+      queryObj.$or = [
         { name: { $regex: search, $options: "i" } },
         { tags: { $regex: search, $options: "i" } },
         { location: { $regex: search, $options: "i" } },
